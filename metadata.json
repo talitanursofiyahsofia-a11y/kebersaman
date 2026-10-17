@@ -1,0 +1,6 @@
+{
+  "name": "Portofolio Saya - Kenangan Bersama",
+  "description": "Portofolio kenangan interaktif dengan galeri foto, audio latar musik, catatan kisah, dan pengaturan kustomisasi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

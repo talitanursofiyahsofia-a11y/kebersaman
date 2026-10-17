@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.font-serif-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-sans-body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Photo Gallery styles & transitions */
+.photo {
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+.photo img,
+.photo video {
+  width: 100%;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.photo:hover img,
+.photo:hover video {
+  transform: scale(1.06);
+}
+
+/* Vinyl rotation animation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 18s linear infinite;
+}
+
+.animate-spin-pause {
+  animation-play-state: paused;
+}
+
+/* Background preview container specified in brief */
+#bg-preview {
+  width: 100%;
+  height: 180px;
+  background: #f1f0eb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+  border: 1px dashed #d6d3cd;
+}
+
+#bg-preview img,
+#bg-preview video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
